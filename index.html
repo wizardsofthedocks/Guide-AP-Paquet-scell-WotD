@@ -2,47 +2,55 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport"
 content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<title>Guide</title>
+<title>Document</title>
 
 <style>
-:root{
---bg:#050505;
+
+/* 🔥 on neutralise TOUT le layout navigateur */
+html{
+margin:0;
+padding:0;
+height:100%;
+background:#000;
 }
 
-html,
 body{
 margin:0;
 padding:0;
+min-height:100%;
+background:#000;
+
+/* CRUCIAL : supprime les comportements de centrage implicites */
+display:block;
 width:100%;
 overflow-x:hidden;
-background:var(--bg);
 }
 
+/* sécurité anti UI browser mobile */
 *{
+box-sizing:border-box;
 margin:0;
 padding:0;
-box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
+/* 🔥 wrapper inutile supprimé volontairement */
 
-body{
-display:block;
-animation:fadeIn .7s ease-out;
-}
-
-/* FULL BLEED RÉEL */
+/* IMAGE FULL BLEED STRICT */
 img{
-display:block;
-width:100%;          /* ← important : plus de vw */
+display:block !important;
+
+width:100% !important;
+max-width:100% !important;
+min-width:100% !important;
+
 height:auto;
 
 border:0;
+
 margin:0;
 padding:0;
 
@@ -50,36 +58,21 @@ vertical-align:top;
 
 user-select:none;
 -webkit-user-drag:none;
-touch-action:pan-y pinch-zoom;
+
+/* évite les effets de “letterbox” sur certains Android */
+object-fit:contain;
+
+background:#000;
+
+/* améliore netteté perçue */
+image-rendering:auto;
 
 transform:translateZ(0);
-
-/* micro amélioration lisibilité */
-filter:
-contrast(1.03)
-brightness(1.01);
-
-image-rendering:auto;
 }
 
-/* animation douce */
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(8px);
-}
-to{
-opacity:1;
-transform:none;
-}
-}
-
-/* mobile tuning */
-@media (max-width:768px){
-img{
-box-shadow:
-0 0 16px rgba(0,0,0,.12);
-}
+/* désactive tout scroll horizontal système */
+html, body{
+overflow-x:hidden;
 }
 
 </style>
@@ -87,7 +80,7 @@ box-shadow:
 
 <body>
 
-<img src="Guide AP Paquet scellé WotD.png" alt="Guide">
+<img src="Guide AP Paquet scellé WotD.png" alt="document">
 
 </body>
 </html>
