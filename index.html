@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1, maximum-scale=3">
+
+<title>Document</title>
+
+<style>
+
+html, body{
+margin:0;
+padding:0;
+width:100%;
+overflow-x:hidden;
+background:#ff0000;
+}
+
+body{
+display:block;
+-webkit-text-size-adjust:100%;
+}
+
+/* conteneur full bleed */
+.wrapper{
+width:100vw;
+max-width:none;
+padding:0;
+margin:0;
+overflow:hidden;
+}
+
+/* image plein écran */
+img{
+display:block;
+width:100vw;
+height:auto;
+
+margin:0;
+padding:0;
+
+border-radius:0;
+box-shadow:none;
+
+user-select:none;
+-webkit-user-drag:none;
+
+touch-action:pan-y pinch-zoom;
+
+transform:translateZ(0);
+
+/* améliore netteté perçue */
+image-rendering:crisp-edges;
+
+/* léger boost lisibilité */
+filter:
+contrast(1.05)
+brightness(1.01);
+}
+
+/* sécurité débordements */
+*{
+box-sizing:border-box;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+<img src="Guide AP Paquet scellé WotD.png" alt="document">
+</div>
+
+</body>
+</html>
