@@ -2,77 +2,45 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport"
-content="width=device-width, initial-scale=1, maximum-scale=3">
-
-<title>Document</title>
+content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <style>
-
-html, body{
-margin:0;
-padding:0;
-width:100%;
-overflow-x:hidden;
-background:#ff0000;
-}
-
+html,
 body{
-display:block;
--webkit-text-size-adjust:100%;
-}
-
-/* conteneur full bleed */
-.wrapper{
-width:100vw;
-max-width:none;
-padding:0;
-margin:0;
-overflow:hidden;
-}
-
-/* image plein écran */
-img{
-display:block;
-width:100vw;
-height:auto;
-
 margin:0;
 padding:0;
-
-border-radius:0;
-box-shadow:none;
-
-user-select:none;
--webkit-user-drag:none;
-
-touch-action:pan-y pinch-zoom;
-
-transform:translateZ(0);
-
-/* améliore netteté perçue */
-image-rendering:crisp-edges;
-
-/* léger boost lisibilité */
-filter:
-contrast(1.05)
-brightness(1.01);
+overflow-x:hidden;
+background:#000;
+width:100%;
 }
 
-/* sécurité débordements */
 *{
+margin:0;
+padding:0;
 box-sizing:border-box;
 }
 
+img{
+display:block;
+
+width:101vw;          /* déborde très légèrement */
+min-width:101vw;
+max-width:101vw;
+
+margin-left:-0.5vw;   /* recentre le débordement */
+
+height:auto;
+
+vertical-align:top;
+border:0;
+}
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
-<img src="Guide AP Paquet scellé WotD.png" alt="document">
-</div>
+<img src="Guide AP Paquet scellé WotD.png" alt="">
 
 </body>
 </html>
