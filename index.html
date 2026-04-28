@@ -36,10 +36,16 @@ display:block;
 animation:fadeIn .7s ease-out;
 }
 
-/* FULL BLEED RÉEL */
+/* FULL BLEED corrigé */
+.full-bleed{
+width:100vw;
+margin-left:calc(50% - 50vw);
+}
+
+/* IMAGE */
 img{
 display:block;
-width:100%;          /* ← important : plus de vw */
+width:100%;
 height:auto;
 
 border:0;
@@ -54,19 +60,16 @@ touch-action:pan-y pinch-zoom;
 
 transform:translateZ(0);
 
-/* micro amélioration lisibilité */
 filter:
 contrast(1.03)
 brightness(1.01);
 
-/* ombre très discrète sans créer de marges visuelles */
 box-shadow:
 0 0 24px rgba(0,0,0,.18);
 
 image-rendering:auto;
 }
 
-/* animation douce */
 @keyframes fadeIn{
 from{
 opacity:0;
@@ -78,7 +81,6 @@ transform:none;
 }
 }
 
-/* mobile tuning */
 @media (max-width:768px){
 img{
 box-shadow:
@@ -91,7 +93,9 @@ box-shadow:
 
 <body>
 
-<img src="Guide AP Paquet scellé WotD.png" alt="Guide">
+<div class="full-bleed">
+  <img src="Guide%20AP%20Paquet%20scell%C3%A9%20WotD.png" alt="Guide">
+</div>
 
 </body>
 </html>
