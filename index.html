@@ -5,14 +5,20 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1, viewport-fit=cover">
 
+<title>Guide</title>
+
 <style>
+:root{
+--bg:#050505;
+}
+
 html,
 body{
 margin:0;
 padding:0;
-overflow-x:hidden;
-background:#000;
 width:100%;
+overflow-x:hidden;
+background:var(--bg);
 }
 
 *{
@@ -21,26 +27,71 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
+body{
+display:block;
+animation:fadeIn .7s ease-out;
+}
+
+/* FULL BLEED RÉEL */
 img{
 display:block;
-
-width:101vw;          /* déborde très légèrement */
-min-width:101vw;
-max-width:101vw;
-
-margin-left:-0.5vw;   /* recentre le débordement */
-
+width:100%;          /* ← important : plus de vw */
 height:auto;
 
-vertical-align:top;
 border:0;
+margin:0;
+padding:0;
+
+vertical-align:top;
+
+user-select:none;
+-webkit-user-drag:none;
+touch-action:pan-y pinch-zoom;
+
+transform:translateZ(0);
+
+/* micro amélioration lisibilité */
+filter:
+contrast(1.03)
+brightness(1.01);
+
+/* ombre très discrète sans créer de marges visuelles */
+box-shadow:
+0 0 24px rgba(0,0,0,.18);
+
+image-rendering:auto;
 }
+
+/* animation douce */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(8px);
+}
+to{
+opacity:1;
+transform:none;
+}
+}
+
+/* mobile tuning */
+@media (max-width:768px){
+img{
+box-shadow:
+0 0 16px rgba(0,0,0,.12);
+}
+}
+
 </style>
 </head>
 
 <body>
 
-<img src="Guide AP Paquet scellé WotD.png" alt="">
+<img src="Guide AP Paquet scellé WotD.png" alt="Guide">
 
 </body>
 </html>
